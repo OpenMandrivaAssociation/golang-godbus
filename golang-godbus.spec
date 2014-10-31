@@ -1,18 +1,17 @@
-%global debug_package   %{nil}
+%define debug_package   %{nil}
 %define import_path     github.com/godbus/dbus
-%define gopath          %{_libdir}/golang
-%define gosrc %{gopath}/src/pkg/%{import_path}
+%define gosrc %{go_dir}/src/pkg/%{import_path}
 
 Name:           golang-godbus
 Version:        1
-Release:        1
+Release:        2
 Summary:        Go client bindings for D-Bus
 License:        BSD
 URL:            https://%{import_path}
 Source0:        https://%{import_path}/archive/v%{version}.tar.gz
 BuildRequires:  golang
 Requires:       golang
-Group:			Development/Other
+Group:		Development/Other
 Provides:       golang(%{import_path}) = %{version}-%{release}
 Provides:       golang(%{import_path}/_examples) = %{version}-%{release}
 Provides:       golang(%{import_path}/introspect) = %{version}-%{release}
