@@ -4,7 +4,7 @@
 
 Name:           golang-godbus
 Version:        1
-Release:        4
+Release:        5
 Summary:        Go client bindings for D-Bus
 License:        BSD
 URL:            https://%{import_path}
